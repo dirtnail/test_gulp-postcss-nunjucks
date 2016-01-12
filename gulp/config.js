@@ -18,5 +18,8 @@ module.exports = {
         developmentAssets + '/fonts/*'
       ]
     }
+  },
+  delete: {
+    src: [developmentAssets]
   }  
 };
