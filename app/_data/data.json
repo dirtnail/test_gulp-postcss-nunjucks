@@ -1,0 +1,14 @@
+{
+  "homepage": {
+    "metaTitle": "Gulp/Postcss/Nunjucks Test",
+    "h1": "Blaat Header",
+    "txt": "Rainbow bra tank so close diablo 3 venenatis that crying not bad. Luke people final week y u no now kiss i lied scared read always anonymous puking rainbows haters gonna hate. Architect avengers feel like a sir gentlemen star wars loki mother no hac avenger trolololo. Amnesia coffee dolar collection friendzoned german freddie mercury lose clinton i dont get it. Father college men superhero dummies fuuuuuuuuuuccckkkkkk sit gag really?",
+    "gallery": [{
+      "src": "assets/img/palm.jpg",
+      "alt": "Image one alt text"
+      }, {
+      "src": "assets/img/palm.jpg",
+      "alt": "Image two alt text"
+    }]
+  }
+}

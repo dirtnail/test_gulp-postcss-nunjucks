@@ -21,6 +21,15 @@ module.exports = {
   delete: {
     src: [developmentAssets]
   },
+  nunjucks: {
+    src:  src,
+    dest: development,
+    options: {   
+      srcTemplates: src + '/_templates',
+      srcPages: src + '/_pages/**/*.+(html|nunjucks)',
+      srcData: src + '/_data/data.json'
+    }
+  },  
   styles: {
     src:  srcAssets + '/styles/*.css',
     dest: developmentAssets + '/css',

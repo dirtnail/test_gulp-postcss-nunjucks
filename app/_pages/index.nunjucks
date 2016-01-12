@@ -1,0 +1,22 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block meta %}
+  {% import 'macros/meta-macro.nunjucks' as meta %}
+  {{meta.title(homepage.metaTitle)}}
+{% endblock %}
+  
+{% block content %} 
+  <!-- Adds the navigation macro -->
+  {% import 'macros/nav-macro.nunjucks' as nav %}
+  {{nav.active('home')}}
+  
+  <div id="particles">
+    <h1>{{homepage.h1}}</h1>
+    <p>{{homepage.txt}}</p>
+  </div>  
+
+  <!-- Adds the gallery partial -->
+  {% include "partials/gallery.nunjucks" %}    
+
+{% endblock %}
