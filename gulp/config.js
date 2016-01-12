@@ -21,5 +21,17 @@ module.exports = {
   },
   delete: {
     src: [developmentAssets]
+  },
+  styles: {
+    src:  srcAssets + '/styles/*.css',
+    dest: developmentAssets + '/css',
+    options: {
+      precss: {},
+      autoprefixer: {
+        browsers: ['last 3 versions'],
+        cascade: true
+      },
+      mqpacker: {}
+    }
   }  
 };
