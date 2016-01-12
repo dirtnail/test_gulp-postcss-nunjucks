@@ -33,5 +33,13 @@ module.exports = {
       },
       mqpacker: {}
     }
-  }  
+  },
+  scripts: {
+    src:  srcAssets + '/scripts/*.js',
+    dest: developmentAssets + '/js'
+  },  
+  watch: {
+    styles:   srcAssets + '/styles/**/*.css',
+    scripts:  srcAssets + '/scripts/**/*.js'
+  }    
 };

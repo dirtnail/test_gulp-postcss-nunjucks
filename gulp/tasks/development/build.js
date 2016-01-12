@@ -7,7 +7,8 @@ var runSequence = require('run-sequence');
 gulp.task('build', function(callback) {
   runSequence('delete',
   [
-    'styles'
+    'styles',
+    'scripts'
   ],
   callback);
 });

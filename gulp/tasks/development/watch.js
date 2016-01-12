@@ -5,4 +5,5 @@ var gulp   = require('gulp');
  */
 gulp.task('watch', ['browsersync'], function() {
   gulp.watch(config.styles, ['styles']);
+  gulp.watch(config.scripts, ['scripts']);
 });
