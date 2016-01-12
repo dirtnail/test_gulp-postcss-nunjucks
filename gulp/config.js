@@ -14,8 +14,7 @@ module.exports = {
       files: [
         developmentAssets + '/css/*.css',
         developmentAssets + '/js/*.js',
-        developmentAssets + '/images/**',
-        developmentAssets + '/fonts/*'
+        developmentAssets + '/img/**'
       ]
     }
   },
@@ -37,9 +36,24 @@ module.exports = {
   scripts: {
     src:  srcAssets + '/scripts/*.js',
     dest: developmentAssets + '/js'
+  },
+  images: {
+    src:  srcAssets + '/images/**/*',
+    dest: developmentAssets + '/img'
+  },
+  base64: {
+    src: developmentAssets + '/css/*.css',
+    dest: developmentAssets + '/css',
+    options: {
+      baseDir: build,
+      extensions: ['png'],
+      maxImageSize: 20 * 1024, // bytes
+      debug: false
+    }
   },  
   watch: {
     styles:   srcAssets + '/styles/**/*.css',
-    scripts:  srcAssets + '/scripts/**/*.js'
+    scripts:  srcAssets + '/scripts/**/*.js',
+    images:   srcAssets + '/images/**/*'    
   }    
 };

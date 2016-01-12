@@ -8,7 +8,9 @@ gulp.task('build', function(callback) {
   runSequence('delete',
   [
     'styles',
-    'scripts'
+    'scripts',
+    'images'    
   ],
+  'base64',
   callback);
 });
