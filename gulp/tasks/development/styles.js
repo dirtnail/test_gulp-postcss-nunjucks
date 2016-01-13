@@ -1,14 +1,11 @@
-var gulp           = require('gulp'),
-    postcss        = require('gulp-postcss'),
-    precss         = require('precss'),
-    nano           = require('gulp-cssnano'),
-    plumber        = require('gulp-plumber'),
-    sourcemaps     = require('gulp-sourcemaps'),
-    gutil          = require('gulp-util'),
-    autoprefixer   = require('autoprefixer'),
-    mqpacker       = require('css-mqpacker'),
-    rename         = require('gulp-rename'),
-    config         = require('../../config').styles;
+var gulp         = require('gulp'),
+    gutil        = require('gulp-util'),
+    plumber      = require('gulp-plumber'),    
+    postcss      = require('gulp-postcss'),
+    precss       = require('precss'),
+    autoprefixer = require('autoprefixer'),
+    mqpacker     = require('css-mqpacker'),
+    config       = require('../../config').styles;
 
 function onError (err) {
   gutil.beep();
@@ -18,7 +15,6 @@ function onError (err) {
 
 /**
  * Run CSS through PostCSS and it's plugins
- * Build sourcemaps and minimize
  */
 var processors = [
   precss(config.options.precss),
@@ -31,10 +27,6 @@ gulp.task('styles', function() {
     .pipe(plumber({
       errorHandler: onError
     }))
-    .pipe(sourcemaps.init())
     .pipe(postcss(processors))
-    .pipe(nano())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.dest));
 });

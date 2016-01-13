@@ -1,0 +1,8 @@
+# Site settings
+url: "http://mydomain.com"
+
+# Build settings  
+build: production
+js_path: http://company.com/assets/js/
+css_path: http://company.com/assets/css/
+img_path: http://company.com/assets/img/

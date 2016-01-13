@@ -1,4 +1,4 @@
 {% macro title(metaTitle='Title Test') %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{metaTitle}}</title>  
+  <title>{{ metaTitle }}</title>  
 {% endmacro %}

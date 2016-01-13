@@ -1,0 +1,16 @@
+<!-- layout.nunjucks -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block meta %} {% endblock %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ cssPath }}/main{%if env == 'production' %}.min{% endif %}.css">
+</head>
+<body>
+  <div class="wrapper">
+    {% block content %} {% endblock %}
+  </div>
+  
+  <script src="{{ jsPath }}/main{%if env == 'production' %}.min{% endif %}.js"></script>
+</body>
+</html>
