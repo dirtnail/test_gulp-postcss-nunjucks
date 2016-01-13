@@ -5,13 +5,12 @@ var gulp        = require('gulp'),
  * Run all tasks needed for a build in defined order
  */
 gulp.task('build', function(callback) {
-  runSequence(//'delete',
+  runSequence(
   [
     'styles',
     'scripts',
-    'images'    
+    'images'
   ],
-  //'base64',  
   'nunjucks',
   callback);
 });
