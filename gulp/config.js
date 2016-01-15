@@ -27,8 +27,13 @@ module.exports = {
       port: 9998
     }
   },
-  delete: {
-    src: [developmentAssets]
+  clean: {
+    development: {
+      src: development
+    },
+    production: {
+      src: production
+    }      
   },
   nunjucks: {
     development: {
@@ -63,24 +68,19 @@ module.exports = {
     }
   },
   scripts: {
-    src:  srcAssets + '/scripts/*.js',
-    dest: developmentAssets + '/js'
+    main: {
+      src:  srcAssets + '/scripts/*.js',
+      dest: developmentAssets + '/js'
+    },
+    vendor: {
+      src:  srcAssets + '/scripts/vendor*.js',
+      dest: developmentAssets + '/js'
+    }    
   },
   images: {
     src:  srcAssets + '/images/**/*',
     dest: developmentAssets + '/img'
   },
-  base64: {
-    src: developmentAssets + '/css/*.css',
-    dest: developmentAssets + '/css',
-    options: {
-      baseDir: build,
-      extensions: ['svg','png','jpg'],
-      maxImageSize: 8 * 1024, // bytes
-      debug: true
-    }
-  },
-  
   optimize: {
     css: {
       src:  developmentAssets + '/css/*.css',
@@ -88,9 +88,16 @@ module.exports = {
       options: {}
     },
     js: {
-      src:  developmentAssets + '/js/*.js',
-      dest: productionAssets + '/js/',
-      options: {}
+      main: {
+        src:  developmentAssets + '/js/*.js',
+        dest: productionAssets + '/js/',
+        options: {}        
+      },
+      vendor: {
+        src:  developmentAssets + '/js/vendor/*.js',
+        dest: productionAssets + '/js/',
+        options: {}
+      }         
     },
     images: {
       src:  developmentAssets + '/images/**/*.{jpg,jpeg,png,gif}',
@@ -102,7 +109,6 @@ module.exports = {
       }
     }
   },
-  
   watch: {
     html:     srcHtml + '/**/*.+(html|nunjucks|json)',    
     styles:   srcAssets + '/styles/**/*.css',
