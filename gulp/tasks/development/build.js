@@ -1,17 +1,15 @@
 var gulp        = require('gulp'),
     runSequence = require('run-sequence');
 
-/**
- * Run all tasks needed for a build in defined order
- */
-gulp.task('build:assets', function() {
-  return runSequence(['styles','scripts','images','copy:fonts'])
-});  
- 
 gulp.task('build', function() {
   return runSequence(
     'clean',
-    'build:assets',
+    [
+      'styles',
+      'scripts',
+      'images',
+      'copy:fonts'
+    ],
     'nunjucks'
   );
 });
