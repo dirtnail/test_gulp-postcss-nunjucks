@@ -117,7 +117,16 @@ module.exports = {
         progessive: true,
         interlaced: true
       }
-    }
+    },
+    html: {
+      src: production + '/**/*.html',
+      dest: production,
+      options: {
+        removeComments: true,
+        removeCommentsFromCDATA: true,
+        collapseWhitespace: true
+      }
+    }    
   },
   revision: {
     src: {

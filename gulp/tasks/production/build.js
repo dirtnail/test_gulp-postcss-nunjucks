@@ -18,7 +18,8 @@ gulp.task('build:production', function() {
       'optimize:css',
       'optimize:js',
       'optimize:images',
-      'copy:fonts:production'
+      'copy:fonts:production',
+      'optimize:html'
     ],
     'revision',
     'rev:collect'
