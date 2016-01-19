@@ -5,8 +5,8 @@ var src               = './app',
     development       = build + '/development',
     developmentAssets = development + '/assets';
     production        = build + '/production',
-    productionAssets  = production + '/assets';    
-    
+    productionAssets  = production + '/assets';
+
 module.exports = {
   browsersync: {
     development: {
@@ -33,7 +33,7 @@ module.exports = {
     },
     production: {
       src: production
-    }      
+    }
   },
   nunjucks: {
     development: {
@@ -48,13 +48,13 @@ module.exports = {
     production: {
       src:   src,
       dest:  production,
-      options: {   
+      options: {
         srcTemplates: srcHtml + '/_templates',
         srcPages: srcHtml + '/_pages/**/*.+(html|nunjucks)',
         srcData: srcHtml + '/_data/data.json'
       }
-    }    
-  },  
+    }
+  },
   styles: {
     src:  srcAssets + '/styles/*.css',
     dest: developmentAssets + '/css',
@@ -75,7 +75,7 @@ module.exports = {
     vendor: {
       src:  srcAssets + '/scripts/vendor*.js',
       dest: developmentAssets + '/js'
-    }    
+    }
   },
   images: {
     src:  srcAssets + '/images/**/*',
@@ -101,13 +101,13 @@ module.exports = {
       main: {
         src:  developmentAssets + '/js/*.js',
         dest: productionAssets + '/js/',
-        options: {}        
+        options: {}
       },
       vendor: {
         src:  developmentAssets + '/js/vendor/*.js',
         dest: productionAssets + '/js/',
         options: {}
-      }         
+      }
     },
     images: {
       src:  developmentAssets + '/images/**/*.{jpg,jpeg,png,gif}',
@@ -126,7 +126,7 @@ module.exports = {
         removeCommentsFromCDATA: true,
         collapseWhitespace: true
       }
-    }    
+    }
   },
   revision: {
     src: {
@@ -153,10 +153,27 @@ module.exports = {
     ],
     dest: production
   },
+  rsync: {
+    src: production + '/**',
+    options: {
+      destination: '~/path/to/my/website/root/',
+      root: production,
+      hostname: 'mydomain.com',
+      username: 'user',
+      incremental: true,
+      progress: true,
+      relative: true,
+      emptyDirectories: true,
+      recursive: true,
+      clean: true,
+      exclude: ['.DS_Store'],
+      include: []
+    }
+  },
   watch: {
     html:     srcHtml + '/**/*.+(html|nunjucks|json)',
     styles:   srcAssets + '/styles/**/*.css',
     scripts:  srcAssets + '/scripts/**/*.js',
     images:   srcAssets + '/images/**/*'
-  }    
+  }
 };
