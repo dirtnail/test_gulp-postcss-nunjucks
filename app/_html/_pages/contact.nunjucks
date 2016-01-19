@@ -1,0 +1,30 @@
+<!-- contact.nunjucks -->
+{% set activePage = "contact" %}
+{% extends "layout.nunjucks" %}
+
+{% block meta %}
+  {% import 'macros/_metadata.nunjucks' as meta %}
+  {{meta.title(content.contact.metaTitle)}}
+{% endblock %}
+  
+{% block header %}  
+  {% include "partials/_header.nunjucks" %}
+{% endblock %}
+  
+{% block content %}  
+  <div id="particles">
+    <h1>{{ content.contact.h1 }}</h1>
+    <p>{{ content.contact.txt }}</p>
+    <form>
+      {% import 'macros/_form.nunjucks' as form %}
+      {{ form.label('Name') }}
+      {{ form.field('name') }}
+      {{ form.label('Comment') }}
+      {{ form.textfield('comment', placeholder='Add comment') }}
+    </form>
+  </div>  
+{% endblock %}
+
+{% block footer %}  
+    {% include "partials/_footer.nunjucks" %}
+{% endblock %}

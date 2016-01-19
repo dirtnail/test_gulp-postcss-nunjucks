@@ -1,0 +1,4 @@
+{# footer.nunjucks #}
+  <footer id="footer">
+    build on Node | Gulp | PostCss | Nunjucks
+  </footer>

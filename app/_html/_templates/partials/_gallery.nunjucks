@@ -1,7 +1,7 @@
-<!-- gallery.nunjucks -->  
+{# gallery.nunjucks #}
   <div class="gallery">
-    <!-- Loops through "images" array -->
-    {% for image in homepage.gallery %}
+  {# Loops through "images" array #}
+    {% for image in content.home.gallery %}
     <div class="gallery__item">
       <img src="{{image.src}}" alt="{{image.alt}}">
     </div>

@@ -81,6 +81,16 @@ module.exports = {
     src:  srcAssets + '/images/**/*',
     dest: developmentAssets + '/img'
   },
+  copyfonts: {
+    development: {
+      src:  srcAssets + '/fonts/*',
+      dest: developmentAssets + '/fonts'
+    },
+    production: {
+      src:  developmentAssets + '/fonts/*',
+      dest: productionAssets + '/fonts'
+    }
+  },
   optimize: {
     css: {
       src:  developmentAssets + '/css/*.css',
@@ -110,7 +120,7 @@ module.exports = {
     }
   },
   watch: {
-    html:     srcHtml + '/**/*.+(html|nunjucks|json)',    
+    html:     srcHtml + '/**/*.+(html|nunjucks|json)',
     styles:   srcAssets + '/styles/**/*.css',
     scripts:  srcAssets + '/scripts/**/*.js',
     images:   srcAssets + '/images/**/*'

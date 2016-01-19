@@ -1,0 +1,9 @@
+<!-- header.nunjucks -->
+  <header id="header">
+    {% import "macros/_navlink.nunjucks" as nav %}
+    <nav class="site-nav">
+      {{ nav.navlink(content.home.name, content.home.type, content.home.url) }}
+      {{ nav.navlink(content.about.name, content.about.type, content.about.url) }}
+      {{ nav.navlink(content.contact.name, content.contact.type, content.contact.url) }}
+    </nav>
+  </header>

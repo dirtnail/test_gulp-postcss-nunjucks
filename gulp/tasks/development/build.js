@@ -5,7 +5,7 @@ var gulp        = require('gulp'),
  * Run all tasks needed for a build in defined order
  */
 gulp.task('build:assets', function() {
-  return runSequence(['styles','scripts','images'])
+  return runSequence(['styles','scripts','images','copy:fonts'])
 });  
  
 gulp.task('build', function() {

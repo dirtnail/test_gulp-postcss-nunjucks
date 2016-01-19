@@ -1,14 +1,35 @@
 {
-  "homepage": {
-    "metaTitle": "Gulp/Postcss/Nunjucks Test",
-    "h1": "Blaat Header",
-    "txt": "Rainbow bra tank so close diablo 3 venenatis that crying not bad. Luke people final week y u no now kiss i lied scared read always anonymous puking rainbows haters gonna hate. Architect avengers feel like a sir gentlemen star wars loki mother no hac avenger trolololo. Amnesia coffee dolar collection friendzoned german freddie mercury lose clinton i dont get it. Father college men superhero dummies fuuuuuuuuuuccckkkkkk sit gag really?",
-    "gallery": [{
-      "src": "assets/img/palm.jpg",
-      "alt": "Image one alt text"
-      }, {
-      "src": "assets/img/palm.jpg",
-      "alt": "Image two alt text"
-    }]
+  "content": {
+    "home": {
+      "name": "Home",
+      "type": "home",
+      "url": "./index.html",
+      "metaTitle": "Gulp/Postcss/Nunjucks Test",
+      "h1": "Lorem Ipsum Dolor",
+      "txt": "Rainbow bra tank so close diablo 3 venenatis that crying not bad. Luke people final week y u no now kiss i lied scared read always anonymous puking rainbows haters gonna hate. Architect avengers feel like a sir gentlemen star wars loki mother no hac avenger trolololo. Amnesia coffee dolar collection friendzoned german freddie mercury lose clinton i dont get it. Father college men superhero dummies fuuuuuuuuuuccckkkkkk sit gag really?",
+      "gallery": [{
+        "src": "assets/img/palm.jpg",
+        "alt": "Image one alt text"
+        }, {
+        "src": "assets/img/palm.jpg",
+        "alt": "Image two alt text"
+      }]
+    },
+    "about": {
+      "name": "About",
+      "type": "about",    
+      "url": "./about.html",
+      "metaTitle": "About Gulp/Postcss/Nunjucks Test",
+      "h1": "About Lorem Ipsum Dolor",
+      "txt": "Rainbow bra tank so close diablo 3 venenatis that crying not bad. Luke people final week y u no now kiss i lied scared read always anonymous puking rainbows haters gonna hate. Architect avengers feel like a sir gentlemen star wars loki mother no hac avenger trolololo. Amnesia coffee dolar collection friendzoned german freddie mercury lose clinton i dont get it. Father college men superhero dummies fuuuuuuuuuuccckkkkkk sit gag really?"
+    },
+    "contact": {
+      "name": "Contact",
+      "type": "contact",    
+      "url": "./contact.html",
+      "metaTitle": "Contact Gulp/Postcss/Nunjucks Test",
+      "h1": "Contact Lorem Ipsum Dolor",
+      "txt": "Rainbow bra tank so close diablo 3 venenatis that crying not bad. Luke people final week y u no now kiss i lied scared read always anonymous puking rainbows haters gonna hate. Architect avengers feel like a sir gentlemen star wars loki mother no hac avenger trolololo. Amnesia coffee dolar collection friendzoned german freddie mercury lose clinton i dont get it. Father college men superhero dummies fuuuuuuuuuuccckkkkkk sit gag really?"
+    }      
   }
 }

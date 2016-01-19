@@ -1,0 +1,10 @@
+<!-- _navlink.nunjucks -->
+{% macro navlink(name, class, url) %}
+  {{activePage}}
+
+  {% if name %}
+    <a href="{{ url }}" class="page-link {{ class }}{%if activePage == class %} active{% endif %}">
+      <span>{{ name }}</span>
+    </a>
+  {% endif %}
+{% endmacro %}

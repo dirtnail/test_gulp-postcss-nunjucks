@@ -1,4 +1,5 @@
 <!-- layout.nunjucks -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +9,10 @@
   <link rel="stylesheet" href="{{ cssPath }}/main{%if env == 'production' %}.min{% endif %}.css">
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper {{ activePage }}">
+    {% block header %} {% endblock %}
     {% block content %} {% endblock %}
+    {% block footer %} {% endblock %}
   </div>
   
   <script src="{{ jsPath }}/main{%if env == 'production' %}.min{% endif %}.js"></script>

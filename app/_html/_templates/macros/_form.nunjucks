@@ -1,0 +1,13 @@
+{% macro field(name, type='text', value='', placeholder='') %}
+  <input type="{{ type }}" name="{{ name }}" value="{{ value | escape }}" {%if placeholder %}placeholder="{{ placeholder | escape }}" {% endif %}/>
+{% endmacro %}
+
+{% macro textfield(name, value='', placeholder='', rows='10', cols='30') %}
+  <textarea name="{{ name }}" rows="{{ rows }}" cols="{{ cols }}" {%if placeholder %}placeholder="{{ placeholder | escape }}" {% endif %}>
+    {{ value | escape }}
+  </textarea>
+{% endmacro %}
+
+{% macro label(text) %}
+  <label>{{ text }}</label>
+{% endmacro %}

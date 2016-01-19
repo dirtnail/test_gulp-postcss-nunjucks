@@ -1,10 +1,10 @@
-<!-- index.nunjucks -->
-{% set activePage = "home" %}
+<!-- about.nunjucks -->
+{% set activePage = "about" %}
 {% extends "layout.nunjucks" %}
 
 {% block meta %}
   {% import 'macros/_metadata.nunjucks' as meta %}
-  {{meta.title(content.home.metaTitle)}}
+  {{meta.title(content.about.metaTitle)}}
 {% endblock %}
   
 {% block header %}  
@@ -13,11 +13,9 @@
   
 {% block content %}  
   <div id="particles">
-    <h1>{{ content.home.h1 }}</h1>
-    <p>{{ content.home.txt }}</p>
+    <h1>{{content.about.h1}}</h1>
+    <p>{{content.about.txt}}</p>
   </div>  
-
-  {% include "partials/_gallery.nunjucks" %}
 {% endblock %}
 
 {% block footer %}  
