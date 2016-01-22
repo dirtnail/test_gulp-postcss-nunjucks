@@ -91,6 +91,13 @@ module.exports = {
       dest: productionAssets + '/fonts'
     }
   },
+  watch: {
+    html:     srcHtml + '/**/*.+(html|nunjucks|json)',
+    styles:   srcAssets + '/styles/**/*.css',
+    scripts:  srcAssets + '/scripts/**/*.js',
+    images:   srcAssets + '/images/**/*'
+  },
+  // optimize assets
   optimize: {
     css: {
       src:  developmentAssets + '/css/*.css',
@@ -110,13 +117,9 @@ module.exports = {
       }
     },
     images: {
-      src:  developmentAssets + '/images/**/*.{jpg,jpeg,png,gif}',
-      dest: productionAssets + '/images/',
-      options: {
-        optimizationLevel: 3,
-        progessive: true,
-        interlaced: true
-      }
+      src:  developmentAssets + '/img/**/*.{jpg,png,gif}',
+      dest: productionAssets + '/img/',
+      options: {}
     },
     html: {
       src: production + '/**/*.html',
@@ -128,38 +131,40 @@ module.exports = {
       }
     }
   },
-  revision: {
+  // revisioning
+  revision: {    
     src: {
       assets: [
         productionAssets + '/css/*.css',
         productionAssets + '/js/*.js',
-        productionAssets + '/images/**/*'
+        productionAssets + '/img/**/*'
       ],
       base: production
     },
     dest: {
       assets: production,
       manifest: {
-        name: 'manifest.json',
+        name: 'rev-manifest.json',
         path: productionAssets
       }
     }
   },
   collect: {
     src: [
-      productionAssets + '/manifest.json',
+      productionAssets + '/rev-manifest.json',
       production + '/**/*.{html,xml,txt,json,css,js}',
       '!' + production + '/feed.xml'
     ],
     dest: production
   },
+  // deploy
   rsync: {
     src: production + '/**',
     options: {
-      destination: '~/path/to/my/website/root/',
+      destination: '/_dump/_cloud\Dropbox/webdev/_git/_myRepos/dirtnail.github.io/',
       root: production,
-      hostname: 'mydomain.com',
-      username: 'user',
+      hostname: '127.0.0.1',
+      username: '',
       incremental: true,
       progress: true,
       relative: true,
@@ -169,11 +174,5 @@ module.exports = {
       exclude: ['.DS_Store'],
       include: []
     }
-  },
-  watch: {
-    html:     srcHtml + '/**/*.+(html|nunjucks|json)',
-    styles:   srcAssets + '/styles/**/*.css',
-    scripts:  srcAssets + '/scripts/**/*.js',
-    images:   srcAssets + '/images/**/*'
   }
 };

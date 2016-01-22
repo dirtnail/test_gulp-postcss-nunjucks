@@ -1,6 +1,6 @@
-var gulp   = require('gulp');
-var rev    = require('gulp-rev');
-var config = require('../../config').revision;
+var gulp   = require('gulp'),
+    rev    = require('gulp-rev'),
+    config = require('../../config').revision;
 
 /**
  * Revision all asset files and
